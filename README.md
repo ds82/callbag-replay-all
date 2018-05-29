@@ -1,4 +1,4 @@
-# callbag-replay-all
+# callbag-replay-all 👜
 
 Remembers all emited values and replays them to every new sink
 

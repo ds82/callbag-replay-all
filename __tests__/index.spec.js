@@ -2,13 +2,13 @@ import fromIter from 'callbag-from-iter';
 import forEach from 'callbag-for-each';
 import subject from 'callbag-subject';
 
-import rememberAll from '../';
+import replay from '../';
 
-describe('rememberAll', () => {
+describe('replay-all', () => {
   it('should remember all values', () => {
     const list = [10, 20, 30, 40];
     const mock = subject();
-    const source$ = rememberAll(0)(mock);
+    const source$ = replay(0)(mock);
 
     list.forEach(n => mock(1, n));
 
@@ -21,7 +21,7 @@ describe('rememberAll', () => {
   it('should emit values after subscription of sink', () => {
     const list = [10];
     const mock = subject();
-    const source$ = rememberAll(0)(mock);
+    const source$ = replay(0)(mock);
 
     list.forEach(n => mock(1, n));
 
@@ -36,7 +36,7 @@ describe('rememberAll', () => {
   it('should remember passed number of values', () => {
     const list = [10, 20, 30];
     const mock = subject();
-    const source$ = rememberAll(1 /* just remember one value*/)(mock);
+    const source$ = replay(1 /* just remember one value*/)(mock);
 
     list.forEach(n => mock(1, n));
 
