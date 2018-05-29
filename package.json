@@ -1,0 +1,37 @@
+{
+  "name": "callbag-replay-all",
+  "version": "1.0.0",
+  "description": "Remembers all emited values and replays them to every new sink",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublish": "npm run test && npm run build",
+    "test": "jest",
+    "build": "babel src/ -d dist/"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.49",
+    "@babel/core": "7.0.0-beta.49",
+    "@babel/preset-env": "7.0.0-beta.49",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "23",
+    "callbag-for-each": "1",
+    "callbag-from-iter": "1.1.0",
+    "callbag-pipe": "1",
+    "callbag-subject": "1",
+    "husky": "0.14",
+    "jest": "23",
+    "prettier": "1"
+  },
+  "keywords": [],
+  "author": "Dennis Saenger <npm-18@mail.ds82.de>",
+  "license": "MIT",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ds82/callbag-replay-all.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ds82/callbag-replay-all/issues"
+  },
+  "homepage": "https://github.com/ds82/callbag-replay-all#readme"
+}
